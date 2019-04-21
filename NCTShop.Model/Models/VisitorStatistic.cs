@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace NCTShop.Model.Models
 {
     [Table("VisitorStatistics")]
-    internal class VisitorStatistic
+    public class VisitorStatistic
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
