@@ -8,14 +8,15 @@ namespace NCTShop.Model.Models
     {
         [Key]
         [MaxLength(50)]
+        [Column(TypeName = "varchar")]
         public string ID { set; get; }
 
-        [Required]
         [MaxLength(50)]
+        [Required]
         public string Name { set; get; }
 
-        [Required]
         [MaxLength(50)]
+        [Required]
         public string Type { set; get; }
     }
 }

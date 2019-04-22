@@ -1,4 +1,5 @@
 ﻿using NCTShop.Model.Abstract;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -20,7 +21,9 @@ namespace NCTShop.Model.Models
         [MaxLength(256)]
         public string Alias { set; get; }
 
-        public string CategoryID { set; get; }
+        [Required]
+        public int CategoryID { set; get; }
+
         [MaxLength(256)]
         public string Image { set; get; }
         [MaxLength(500)]
@@ -32,5 +35,7 @@ namespace NCTShop.Model.Models
 
         [ForeignKey("CategoryID")]
         public virtual PostCategory PostCategory { set; get; }
+
+        public virtual IEnumerable<PostTag> PostTags { set; get; }
     }
 }

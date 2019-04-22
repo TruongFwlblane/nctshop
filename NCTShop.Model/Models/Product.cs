@@ -21,7 +21,9 @@ namespace NCTShop.Model.Models
         public int CategoryID { set; get; }
         [MaxLength(256)]
         public string Image { set; get; }
-        public XElement MoreoImages { set; get; }
+
+        [Column(TypeName ="xml")]
+        public string MoreoImages { set; get; }
         public decimal Price { set; get; }
         public decimal? PromotionPrice { set; get; }
         public int Warrenty { set; get; }
